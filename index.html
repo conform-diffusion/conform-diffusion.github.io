@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Contrast is All You Need For High-Fidelity Text-to-Image Diffusion Models">
+  <meta property="og:title" content="CONFORM"/>
+  <meta property="og:description" content="Contrast is All You Need For High-Fidelity Text-to-Image Diffusion Models"/>
+  <meta property="og:url" content="https://contrast-is-all-you-need.github.io/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/ConformTeaser.png" />
+  <meta property="og:image:width" content="750"/>
+  <meta property="og:image:height" content="252"/>
+
+
+  <meta name="twitter:title" content="CONFORM">
+  <meta name="twitter:description" content="Contrast is All You Need For High-Fidelity Text-to-Image Diffusion Models">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/AttentionVisualization.png">
+  <meta name="twitter:card" content="static/images/AttentionVisualization.png">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Contrast is All You Need For High-Fidelity Text-to-Image Diffusion Models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>CONFORM</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><b>CONFORM</b>: <u>Con</u>trast is All You Need <u>For</u> High-Fidelity Text-to-Image Diffusion <u>M</u>odels</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://tunahansalih.github.io/" target="_blank">Tuna Han Salih Meral</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://enis.dev/" target="_blank">Enis Simsar</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://federicotombari.github.io/" target="_blank">Federico Tombari</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://pinguar.org/" target="_blank">Pınar Yanardağ</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Virginia Tech</span><br />
+              <span class="author-block"><sup>2</sup>ETH Zürich - DALAB</span><br />
+              <span class="author-block"><sup>3</sup>Google Switzerland</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv (Coming Soon)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      </h2>
+    </div>
+  </div>
+</section> -->
+<!-- End teaser video -->
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered">
+      <img src="static/images/ConformTeaser.png" alt=""/>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        Our training-free method combines a contrastive objective with test-time optimization, significantly improving how models such as Imagen and Stable Diffusion generate images with text prompts consisting of multiple concepts or subjects such as "a bear and a horse"
+      </h2>
+    </div>
+  </div>
+</section>
+  
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Images produced by text-to-image diffusion models might not always faithfully represent the semantic intent of the provided text prompt where the model might overlook or entirely fail to produce certain objects. While recent studies propose various solutions, they often require customly tailored functions for each of these problems, leading to sub-optimal results, especially for complex prompts. Our work introduces a novel perspective by tackling this challenge in a contrastive context. Our approach intuitively promotes the segregation of objects in attention maps, while also maintaining that pairs of related attributes are kept close to each other.  We conducted extensive experiments across a wide variety of scenarios, each involving unique combinations of objects, attributes, and scenes. These experiments effectively showcase the versatility, efficiency, and flexibility of our method in working with both latent and pixel-based diffusion models, including Stable Diffusion and Imagen. Moreover, we publicly share our source code to facilitate further research.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supplementary_sd_page_0.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of CONFORM on Stable Diffusion-based methods.
+        </h2>
+      </div>
+        <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supplementary_sd_page_1.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of CONFORM on Stable Diffusion-based methods.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supplementary_sd_page_2.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of CONFORM on Stable Diffusion-based methods.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supplementary_sd_page_3.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of CONFORM on Stable Diffusion-based methods.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supplementary_sd_page_4.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of CONFORM on Stable Diffusion-based methods.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supplementary_sd_page_5.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of CONFORM on Stable Diffusion-based methods.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supplementary_sd_page_6.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of CONFORM on Stable Diffusion-based methods.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supplementary_sd_page_7.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of CONFORM on Stable Diffusion-based methods.
+        </h2>
+      </div>
+      
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<!-- Image carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supplementary_imagen_page_0.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of CONFORM with Imagen.
+        </h2>
+      </div>
+        <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supplementary_imagen_page_1.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of CONFORM with Imagen.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supplementary_imagen_page_2.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of CONFORM with Imagen.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supplementary_imagen_page_3.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of CONFORM with Imagen.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supplementary_imagen_page_4.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of CONFORM with Imagen.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supplementary_imagen_page_5.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of CONFORM with Imagen.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supplementary_imagen_page_6.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of CONFORM with Imagen.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/supplementary_imagen_page_7.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of CONFORM with Imagen.
+        </h2>
+      </div>
+      
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Youtube video -->
+<!-- <section class="hero is-small is-light"> -->
+<!--   <div class="hero-body"> -->
+<!--     <div class="container"> -->
+      <!-- Paper video. -->
+<!--       <h2 class="title is-3">Video Presentation</h2> -->
+<!--       <div class="columns is-centered has-text-centered"> -->
+<!--         <div class="column is-four-fifths"> -->
+          
+<!--           <div class="publication-video"> -->
+            <!-- Youtube embed code here -->
+<!--             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+<!--           </div> -->
+<!--         </div> -->
+<!--       </div> -->
+<!--     </div> -->
+<!--   </div> -->
+<!-- </section> -->
+<!-- End youtube video -->
+
+
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section>
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>(Coming Soon)</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
